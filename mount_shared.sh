@@ -1,8 +1,8 @@
 #!/bin/bash
-DEST_FOLDER="/home/tioma/dev"
+DEST_FOLDER="/path/to/dest/folder"
 
 start() {
-        echo "TIOMA---> Mounting the shared folders"
+        echo "Mounting the shared folders"
         if [ ! -d "$DEST_FOLDER" ]; then
                 mkdir -p "$DEST_FOLDER"
         fi
@@ -10,7 +10,7 @@ start() {
 }
 
 stop() {
-        echo "TIOMA---> Unmounting the shared folders"
+        echo "Unmounting the shared folders"
         if [ -d "$DEST_FOLDER" ]; then
                 umount "$DEST_FOLDER"
                 rm -rf "$DEST_FOLDER"
